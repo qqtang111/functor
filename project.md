@@ -243,7 +243,9 @@ CREATE TABLE preset_favorites (
 - ✅ 本地开发：`npm run dev`（Vite dev server）
 - ✅ 生产构建：`npm run build` → `dist/` 静态文件
 - ✅ PWA 就绪：manifest.json + Service Worker
-- 🚧 Vercel 一键部署（待推送 GitHub 后配置）
+- ✅ GitHub 仓库：[qqtang111/functor](https://github.com/qqtang111/functor)
+- ✅ Vercel 部署：`vibe-hazel-xi.vercel.app`（READY，2026-06-14）
+- 🚧 Vercel ↔ GitHub 自动部署连接
 - 🚧 自定义域名 + HTTPS（待购买域名）
 - 🚧 CI/CD 流水线（GitHub Actions → Vercel）
 
