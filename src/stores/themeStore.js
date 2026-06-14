@@ -8,9 +8,9 @@ const THEMES = [
 ]
 
 const FONT_SCHEMES = [
-  { id: 'scheme-1', heading: 'Space Grotesk', sans: 'Inter', mono: 'JetBrains Mono' },
-  { id: 'scheme-2', heading: 'Geist', sans: 'Geist', mono: 'Geist Mono' },
-  { id: 'scheme-3', heading: 'Playfair Display', sans: 'Inter', mono: 'Fira Code' },
+  { id: 'scheme-1', heading: '现代几何', sans: '系统无衬线', mono: '等宽代码' },
+  { id: 'scheme-2', heading: '原生极简', sans: '系统无衬线', mono: '等宽代码' },
+  { id: 'scheme-3', heading: '优雅衬线', sans: '系统无衬线', mono: '等宽代码' },
 ]
 
 function applyTheme(id) {

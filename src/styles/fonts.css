@@ -1,15 +1,16 @@
+/* 系统字体栈 — 零外部依赖，中英文全平台秒加载 */
 body.font-scheme-1 {
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-heading: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
 }
 body.font-scheme-2 {
-  --font-heading: 'Geist', sans-serif;
-  --font-sans: 'Geist', sans-serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-heading: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  --font-sans: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
 }
 body.font-scheme-3 {
-  --font-heading: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'Fira Code', monospace;
+  --font-heading: 'Noto Serif SC', 'Source Han Serif SC', 'Palatino', 'Georgia', 'Songti SC', serif;
+  --font-sans: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  --font-mono: 'Source Code Pro', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
 }
