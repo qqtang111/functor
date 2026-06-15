@@ -20,8 +20,15 @@ export default function TangentLine({ width, height }) {
     if (!demoActive || !fn || fn.isDerivative || width === 0 || height === 0) return null
     const RANGE = 6 / zoom
     const cx = width / 2; const cy = height / 2
-    const sx = cx / RANGE; const sy = cy / RANGE
-    const points = sample2D(fn.expr, [ox - RANGE, ox + RANGE], 600)
+    const s = Math.min(cx, cy) / RANGE
+
+    // Pass parameter values to derivative evaluation
+    const paramSubs = {}
+    if (fn.parameters) {
+      for (const [k, v] of Object.entries(fn.parameters)) paramSubs[k] = v.value
+    }
+
+    const points = sample2D(fn.expr, [ox - RANGE, ox + RANGE], 600, paramSubs)
     const valid = points.filter(Boolean)
     if (valid.length === 0) return null
     const idx = Math.floor(demoProgress * (valid.length - 1))
@@ -29,14 +36,18 @@ export default function TangentLine({ width, height }) {
     if (!pt) return null
     const x0 = pt.x; const y0 = pt.y
 
+    // Symbolic derivative with param values
     let slope = null
     const deriv = computeDerivative(fn.expr)
-    if (deriv) { try { slope = deriv.compiled.evaluate({ x: x0 }) } catch {} }
+    if (deriv) {
+      try { slope = deriv.compiled.evaluate({ x: x0, ...paramSubs }) } catch {}
+    }
     if (slope === null || !isFinite(slope)) {
+      // Numerical fallback
       try {
         const h = 0.001
-        const y1 = math.compile(fn.expr).evaluate({ x: x0 + h })
-        const y2 = math.compile(fn.expr).evaluate({ x: x0 - h })
+        const y1 = math.compile(fn.expr).evaluate({ x: x0 + h, ...paramSubs })
+        const y2 = math.compile(fn.expr).evaluate({ x: x0 - h, ...paramSubs })
         slope = (y1 - y2) / (2 * h)
       } catch { return null }
     }
@@ -46,11 +57,11 @@ export default function TangentLine({ width, height }) {
     const yMin = slope * (xMin - x0) + y0
     const yMax = slope * (xMax - x0) + y0
     return {
-      x1: cx + (xMin - ox) * sx, y1: cy - (yMin - oy) * sy,
-      x2: cx + (xMax - ox) * sx, y2: cy - (yMax - oy) * sy,
-      px: cx + (x0 - ox) * sx, py: cy - (y0 - oy) * sy,
+      x1: cx + (xMin - ox) * s, y1: cy - (yMin - oy) * s,
+      x2: cx + (xMax - ox) * s, y2: cy - (yMax - oy) * s,
+      px: cx + (x0 - ox) * s, py: cy - (y0 - oy) * s,
     }
-  }, [demoActive, fn?.id, demoProgress, zoom, ox, oy, width, height])
+  }, [demoActive, fn?.id, fn?.parameters, demoProgress, zoom, ox, oy, width, height])
 
   if (!line) return null
 

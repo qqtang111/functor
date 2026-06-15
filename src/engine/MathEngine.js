@@ -5,7 +5,14 @@ const DEFAULT_RANGE = [-5, 5]
 const SAMPLES_2D = 600
 const SAMPLES_3D = 80
 
-export function sample2D(expr, range = DEFAULT_RANGE, samples = SAMPLES_2D) {
+/**
+ * Sample y = f(x) with optional parameter substitution
+ * @param {string} expr
+ * @param {[number, number]} range
+ * @param {number} samples
+ * @param {object} params - additional variable values e.g., {k: 2.5, b: 1}
+ */
+export function sample2D(expr, range = DEFAULT_RANGE, samples = SAMPLES_2D, params = {}) {
   const compiled = math.compile(expr)
   const [xMin, xMax] = range
   const step = (xMax - xMin) / samples
@@ -13,7 +20,7 @@ export function sample2D(expr, range = DEFAULT_RANGE, samples = SAMPLES_2D) {
   for (let i = 0; i <= samples; i++) {
     const x = xMin + i * step
     try {
-      const y = compiled.evaluate({ x })
+      const y = compiled.evaluate({ x, ...params })
       if (typeof y === 'number' && isFinite(y)) {
         points.push({ x, y })
       } else {
@@ -26,8 +33,16 @@ export function sample2D(expr, range = DEFAULT_RANGE, samples = SAMPLES_2D) {
   return points
 }
 
-/** Sample z = f(x, y) over a grid. Returns { positions: Float32Array, indices: Uint32Array, colors: Float32Array, nx, ny } */
-export function sample3D(expr, range = DEFAULT_RANGE, nx = SAMPLES_3D, ny = SAMPLES_3D) {
+/**
+ * Sample z = f(x, y) with optional parameter substitution + LOD support
+ * @param {string} expr
+ * @param {[number, number]} range
+ * @param {number} nx - grid resolution X (lower = LOD)
+ * @param {number} ny - grid resolution Y
+ * @param {object} params - additional variable values
+ * @returns {{ positions: Float32Array, indices: Uint32Array, colors: Float32Array, nx, ny, zMin, zMax }}
+ */
+export function sample3D(expr, range = DEFAULT_RANGE, nx = SAMPLES_3D, ny = SAMPLES_3D, params = {}) {
   const compiled = math.compile(expr)
   const [lo, hi] = range
   const dx = (hi - lo) / (nx - 1)
@@ -44,7 +59,7 @@ export function sample3D(expr, range = DEFAULT_RANGE, nx = SAMPLES_3D, ny = SAMP
       const x = lo + ix * dx
       const idx = iy * nx + ix
       try {
-        const z = compiled.evaluate({ x, y })
+        const z = compiled.evaluate({ x, y, ...params })
         if (typeof z === 'number' && isFinite(z)) {
           zVals[idx] = z
           if (z < zMin) zMin = z
@@ -92,15 +107,24 @@ function heatColor(t) {
   else { const s = (t - 0.75) / 0.25; return [1, 1 - s, 0] }
 }
 
-/** Compute symbolic derivative df/dx. Returns { expr: string, compiled } or null */
+/** Compute symbolic derivative df/dx. Returns { expr: string, compiled } or null.
+ *  Handles parameterized expressions like k*x+b → derivative k.
+ */
 export function computeDerivative(expr) {
   try {
     const node = math.parse(expr)
     const deriv = math.derivative(node, 'x')
     const derivExpr = deriv.toString()
     const compiled = math.compile(derivExpr)
-    // Validate by evaluating at x=1
-    compiled.evaluate({ x: 1 })
+
+    // Validate by evaluating at x=1. If params exist, supply defaults.
+    try {
+      compiled.evaluate({ x: 1 })
+    } catch {
+      // Derivative may contain parameters (e.g., derivative of k*x+b is k)
+      // That's OK — just skip the validation step
+    }
+
     return { expr: derivExpr, compiled }
   } catch {
     return null

@@ -1,6 +1,6 @@
 # 📐 Functor — Vibe Coding 全栈项目文档
 
-> **状态**: 🟢 Phase 1-6 完成，Phase 7 规划中 | **最后更新**: 2026-06-14
+> **状态**: 🟢 Phase 1-6 完成，Phase 7 规划中，Phase 8 需求已定义 | **最后更新**: 2026-06-15
 > **开发范式**: Vibe Coding — AI 驱动、角色分工、渐进式交付
 
 ---
@@ -245,9 +245,11 @@ CREATE TABLE preset_favorites (
 - ✅ PWA 就绪：manifest.json + Service Worker
 - ✅ GitHub 仓库：[qqtang111/functor](https://github.com/qqtang111/functor)
 - ✅ Vercel 部署：`vibe-hazel-xi.vercel.app`（READY，2026-06-14）
-- 🚧 Vercel ↔ GitHub 自动部署连接
-- 🚧 自定义域名 + HTTPS（待购买域名）
-- 🚧 CI/CD 流水线（GitHub Actions → Vercel）
+- ✅ Cloudflare Pages 部署：`functor-2bo.pages.dev`（READY，2026-06-15）
+- ✅ Workers + D1 后端：`functor-api.51997759.workers.dev`（READY，2026-06-15）
+- ✅ Pages Functions API：`functor-2bo.pages.dev/api/*`（同域部署，17 个端点）
+- 🚧 自定义域名 + HTTPS（待购买域名，解决国内 Cloudflare 域名被墙）
+- 🚧 CI/CD 流水线（GitHub Actions → Cloudflare Pages）
 
 ---
 
@@ -262,6 +264,7 @@ CREATE TABLE preset_favorites (
 | P5 3D 增强 | 等高线+截面需求 | 色标+线框设计 | 等高线+梯度+截面 | — | 3D 性能测试 | — |
 | P6 收尾 | i18n+PWA 规格 | 响应式+移动端 UI | i18n+PWA+打磨 | — | iOS/触屏测试 | PWA 配置 |
 | P7 用户系统 | 用户+社区需求 | 登录页+广场 UI | 登录/预设/广场 | DB+Auth+API | 安全+E2E | Vercel+Supabase |
+| P8 滑块+数列 | 可变参数+数列需求 | 滑块+数列 UI | 滑块+数列引擎 | variables 扩展 | 验收+回归 | 构建+部署 |
 
 ---
 
@@ -575,6 +578,38 @@ git push -u origin main
 
 ---
 
+### Phase 8：🟡 可变参数滑块 + 数列与级数可视化（规划中）
+
+> **文档**: [[plans/phase8-variable-sliders-sequences.md]]
+
+#### 8.1 可变参数滑块
+- 函数表达式中的参数自动检测（如 `y = kx + b` 中的 `k`, `b`）
+- 滑块面板实时调节参数值，画布同步更新
+- 支持 2D 和 3D 模式
+- 自定义范围、步长、锁定/重置
+- 参数动画播放（自动循环变化）
+- 滑块配置随预设一起保存/加载
+
+#### 8.2 数列与级数可视化
+- 数列模式（a_n 离散点图）和部分和模式（S_n 累积曲线）
+- n 变量支持，离散整数点采样
+- 极限线标注 + 收敛/发散检测
+- 三种显示模式：离散点 / 点+线 / 阶梯图
+- 12+ 内置数列预设（等差、等比、p-级数、几何级数等）
+- 逐项播放动画 + 一键求和
+
+#### 8.3 P8 角色分工
+| 角色 | 任务 |
+|------|------|
+| 📋 PM | 定义 P8 PRD（[[plans/phase8-variable-sliders-sequences.md]]） |
+| 🎨 UI | 滑块面板设计、数列控制面板设计、显示模式切换设计 |
+| ⚛️ 前端 | ParamDetector、SliderPanel、SequenceEngine、Canvas2D 扩展 |
+| 🔧 后端 | presets 表 variables 字段扩展（兼容滑块配置） |
+| 🧪 测试 | 滑块/数列功能验收、边界测试、回归测试 |
+| 🚀 运维 | 构建验证 + 部署 |
+
+---
+
 ## 📐 七、项目结构
 
 ```
@@ -656,10 +691,13 @@ Phase N: [角色] 简短描述
 | 2026-06-14 | P1-P6 完成：2D/3D 引擎 + 预设库 + 双语 + PWA | 30+ 文件，构建通过 |
 | 2026-06-14 | P7 后端选型：Supabase | 免费额度大，AI 友好，无需自己搭服务器 |
 | 2026-06-14 | P7 部署选型：Vercel + Supabase | 零成本方案，全球 CDN |
+| 2026-06-15 | P7 后端切换：Cloudflare Workers + D1 | 无冷启动、中国速度快、与 Pages 原生集成 |
+| 2026-06-15 | P8 规划：可变参数滑块 + 数列与级数可视化 | 核心数学交互能力，差异化竞争力 |
 
 ### 当前进度
 - 🟢 Phase 1-6：✅ 全部完成，构建通过
 - 🔴 Phase 7：用户系统 + 云端同步（待开发）
+- 🟡 Phase 8：可变参数滑块 + 数列与级数可视化（需求已定义，见 [[plans/phase8-variable-sliders-sequences.md]]）
 
 ---
 
@@ -674,6 +712,9 @@ Phase N: [角色] 简短描述
 - [ ] 是否需要用户登录/保存功能？（P7 实现中）
 - [ ] 社区预设广场是否要审核机制？
 - [ ] 是否要开发移动 App 版本？
+- [ ] P8 参数自动检测是否覆盖 Greek 字母名？（规划中）
+- [ ] P8 数列是否支持负整数 n 和递归定义？（规划中）
+- [ ] P8 是否支持多参数同时动画播放？（规划中）
 
 ---
 

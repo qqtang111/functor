@@ -25,35 +25,36 @@ export default function CurveAnimation({ width, height }) {
     return () => clearTimeout(timer)
   }, [animIds])
 
-  if (width === 0 || height === 0) return null
+  // Only render during brief animation — otherwise SVG overlays duplicate the canvas curves
+  if (width === 0 || height === 0 || animIds.size === 0) return null
 
   const RANGE = 6 / zoom
   const cx = width / 2; const cy = height / 2
-  const sx = cx / RANGE; const sy = cy / RANGE
+  const s = Math.min(cx, cy) / RANGE
 
   return (
     <svg width={width} height={height}
       style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none' }}>
       {visible.map((f) => {
+        if (!animIds.has(f.id)) return null
         const points = sample2D(f.expr, [ox - RANGE, ox + RANGE], 400)
         const pathParts = []
         let started = false
         points.forEach((p) => {
           if (p === null) { started = false; return }
-          const dx = cx + (p.x - ox) * sx
-          const dy = cy - (p.y - oy) * sy
+          const dx = cx + (p.x - ox) * s
+          const dy = cy - (p.y - oy) * s
           if (!started) { pathParts.push(`M${dx},${dy}`); started = true }
           else pathParts.push(`L${dx},${dy}`)
         })
         if (pathParts.length === 0) return null
         const d = pathParts.join(' ')
-        const isNew = animIds.has(f.id)
         return (
           <path key={f.id} d={d} fill="none" stroke={f.color}
             strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"
-            strokeDasharray={isNew ? pathParts.length * 5 : 'none'}
-            strokeDashoffset={isNew ? pathParts.length * 5 : 0}
-            style={isNew ? { animation: 'functor-draw 0.8s ease-out forwards' } : {}} />
+            strokeDasharray={pathParts.length * 5}
+            strokeDashoffset={pathParts.length * 5}
+            style={{ animation: 'functor-draw 0.8s ease-out forwards' }} />
         )
       })}
       <style>{`@keyframes functor-draw { to { stroke-dashoffset: 0; } }`}</style>

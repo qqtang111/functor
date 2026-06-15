@@ -1,0 +1,27 @@
+{
+  "name": "functor-api",
+  "version": "1.0.0",
+  "description": "Functor 后端 API — Cloudflare Workers + D1",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "wrangler d1 migrations apply functor-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply functor-db --remote",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.2.0",
+    "bcryptjs": "^2.4.3",
+    "drizzle-kit": "^0.25.0",
+    "drizzle-orm": "^0.36.0",
+    "hono": "^4.4.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250504.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^4.100.0"
+  }
+}

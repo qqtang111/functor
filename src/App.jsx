@@ -42,7 +42,6 @@ function App() {
         <div className={`sidebar-wrapper ${sidebarOpen ? 'open' : 'closed'}`}
           style={{
             display: 'flex', flexShrink: 0,
-            transition: 'width 0.25s ease, opacity 0.25s ease',
           }}>
           <Sidebar onClose={() => setSidebarOpen(false)} />
         </div>

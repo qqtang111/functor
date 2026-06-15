@@ -4,6 +4,7 @@ import { useFunctionStore } from '../../stores/functionStore'
 import { useViewStore } from '../../stores/viewStore'
 import { detectDimension } from '../../engine/DimDetector'
 import { validateExpression } from '../../engine/MathEngine'
+import { createParamConfig } from '../../engine/ParamDetector'
 import MathKeyboard from './MathKeyboard'
 
 /** Map mathjs error messages to i18n keys */
@@ -35,10 +36,17 @@ export default function FunctionInput() {
   const addFunction = useFunctionStore((s) => s.addFunction)
   const addDerivative = useFunctionStore((s) => s.addDerivative)
   const removeFunction = useFunctionStore((s) => s.removeFunction)
+  const updateExpression = useFunctionStore((s) => s.updateExpression)
+  const setParamValue = useFunctionStore((s) => s.setParamValue)
+  const setParamRange = useFunctionStore((s) => s.setParamRange)
   const startDemo = useViewStore((s) => s.startDemo)
   const [showKeyboard, setShowKeyboard] = useState(false)
   const [inputVal, setInputVal] = useState('')
   const [error, setError] = useState(null)
+  const [inputMode, setInputMode] = useState('function')
+  const [showParamDialog, setShowParamDialog] = useState(false)
+  const [newParamName, setNewParamName] = useState('')
+  const [editingId, setEditingId] = useState(null) // Phase 8: edit mode for existing functions
   const inputRef = useRef(null)
   const wrapperRef = useRef(null)
   const dim = detectDimension(inputVal)
@@ -61,17 +69,20 @@ export default function FunctionInput() {
     val = val.replace(/（/g, '(').replace(/）/g, ')')
     setInputVal(val)
     setError(null)
-  }, [])
+    if (editingId) setEditingId(null) // New input clears edit mode
+  }, [editingId])
 
   const handleInsert = (text) => {
     const el = inputRef.current; if (!el) return
+    // Map Desmos symbols to mathjs-compatible text
+    const map = { '×': '*', '÷': '/', '−': '-', '²': '^2', 'ˣ': '^', 'π': 'pi' }
+    const mapped = map[text] || text
     const start = el.selectionStart
-    const newVal = inputVal.slice(0, start) + text + inputVal.slice(start)
+    const newVal = inputVal.slice(0, start) + mapped + inputVal.slice(start)
     setInputVal(newVal); setError(null)
-    // Keep focus on input after keyboard key click
     setTimeout(() => {
       el.focus()
-      el.selectionStart = el.selectionEnd = start + text.length
+      el.selectionStart = el.selectionEnd = start + mapped.length
     }, 10)
   }
 
@@ -82,6 +93,24 @@ export default function FunctionInput() {
       setInputVal(inputVal.slice(0, start - 1) + inputVal.slice(start))
       setTimeout(() => { el.focus(); el.selectionStart = el.selectionEnd = start - 1 }, 10)
     }
+  }
+
+  // Manual param registration
+  const handleAddParam = () => {
+    setNewParamName('')
+    setShowParamDialog(true)
+  }
+
+  const handleConfirmParam = () => {
+    const name = newParamName.trim()
+    if (!name) { setShowParamDialog(false); return }
+    const fn = functions.find((f) => f.visible && !f.isDerivative)
+    if (fn) {
+      const cfg = createParamConfig(name)
+      setParamValue(fn.id, name, cfg.value)
+      setParamRange(fn.id, name, { min: cfg.min, max: cfg.max, step: cfg.step, default: cfg.default })
+    }
+    setShowParamDialog(false); setNewParamName('')
   }
 
   const handleSubmit = () => {
@@ -99,7 +128,20 @@ export default function FunctionInput() {
     const { valid, error: err } = validateExpression(expr)
     if (!valid) { setError(t(getErrorKey(err))); return }
 
-    addFunction(expr)
+    // Check if editing an existing function (duplicate prevention)
+    if (editingId) {
+      updateExpression(editingId, expr)
+      setEditingId(null)
+    } else {
+      // Prevent adding duplicate of existing visible function
+      const dup = functions.find((f) => f.visible && f.expr === expr && !f.isDerivative)
+      if (dup) {
+        // Update existing function instead of duplicating
+        updateExpression(dup.id, expr)
+      } else {
+        addFunction(expr, { mode: inputMode })
+      }
+    }
     setInputVal(''); setError(null); setShowKeyboard(false)
   }
 
@@ -114,7 +156,7 @@ export default function FunctionInput() {
           display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px',
         }}>
           <div
-            onClick={() => { setInputVal(f.expr); setShowKeyboard(true); inputRef.current?.focus() }}
+            onClick={() => { setInputVal(f.expr); setInputMode(f.mode || 'function'); setEditingId(f.id); setShowKeyboard(true); inputRef.current?.focus() }}
             style={{
               display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 10px', flex: 1,
               border: '1px solid var(--border-subtle)', borderRadius: '6px', background: 'var(--surface)',
@@ -128,14 +170,14 @@ export default function FunctionInput() {
               {f.label || f.expr}
             </span>
             <span style={{ fontSize: '9px', color: 'var(--text-muted)', flexShrink: 0 }}>
-              {f.isDerivative ? 'f\'' : '2D'}
+              {f.isDerivative ? 'f\'' : f.mode === 'sequence' ? 'aₙ' : f.mode === 'partialSum' ? 'Sₙ' : '2D'}
             </span>
           </div>
 
           {/* Action buttons */}
           <div style={{ display: 'flex', gap: '2px', flexShrink: 0 }}>
             {!f.isDerivative && (
-              <span onClick={(e) => { e.stopPropagation(); addDerivative(f.id) }}
+              <span onClick={(e) => { e.stopPropagation(); addDerivative(f.id); setTimeout(() => startDemo(f.id), 200) }}
                 title="添加导数"
                 style={{
                   color: 'var(--accent)', cursor: 'pointer', fontSize: '11px',
@@ -159,6 +201,27 @@ export default function FunctionInput() {
       ))}
 
       <div style={{ position: 'relative' }}>
+        {/* Phase 8: Mode selector */}
+        <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+          {[
+            { key: 'function', label: 'f(x)' },
+            { key: 'sequence', label: 'aₙ' },
+            { key: 'partialSum', label: 'Sₙ' },
+          ].map((m) => (
+            <div key={m.key}
+              onClick={() => setInputMode(m.key)}
+              style={{
+                padding: '3px 8px', fontSize: '10px', fontFamily: 'var(--font-mono)',
+                borderRadius: '4px', cursor: 'pointer',
+                background: inputMode === m.key ? 'var(--accent)' : 'var(--surface)',
+                color: inputMode === m.key ? '#fff' : 'var(--text-muted)',
+                border: inputMode === m.key ? 'none' : '1px solid var(--border-subtle)',
+                transition: 'all 0.15s',
+              }}>
+              {m.label}
+            </div>
+          ))}
+        </div>
         <input ref={inputRef} type="text" value={inputVal}
           onChange={handleChange}
           onFocus={() => setShowKeyboard(true)}
@@ -177,12 +240,49 @@ export default function FunctionInput() {
       </div>
       {error && <div style={{ color: 'var(--danger)', fontSize: '11px', marginTop: '4px', paddingLeft: '4px' }}>{error}</div>}
 
+      {/* Manual param dialog */}
+      {showParamDialog && (
+        <div style={{
+          position: 'absolute', bottom: '50px', left: 0, right: 0, zIndex: 210,
+          background: 'rgba(10,10,30,0.98)', border: '1px solid var(--accent)',
+          borderRadius: '8px', padding: '10px', margin: '0 4px',
+        }}>
+          <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '6px' }}>
+            添加自定义参数:
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <input value={newParamName} onChange={(e) => setNewParamName(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') handleConfirmParam(); if (e.key === 'Escape') setShowParamDialog(false) }}
+              autoFocus placeholder="参数名, 如 myVar"
+              style={{
+                flex: 1, padding: '6px 8px', fontSize: '12px', fontFamily: 'var(--font-mono)',
+                border: '1px solid var(--accent)', borderRadius: '4px',
+                background: 'var(--surface)', color: 'var(--text-primary)', outline: 'none',
+              }} />
+            <button onClick={handleConfirmParam}
+              style={{
+                padding: '6px 12px', border: 'none', borderRadius: '4px',
+                background: 'var(--accent)', color: '#fff', cursor: 'pointer',
+                fontSize: '12px', fontWeight: 600,
+              }}>添加</button>
+            <button onClick={() => setShowParamDialog(false)}
+              style={{
+                padding: '6px 10px', border: '1px solid var(--border-subtle)', borderRadius: '4px',
+                background: 'var(--surface)', color: 'var(--text-muted)', cursor: 'pointer',
+                fontSize: '12px',
+              }}>取消</button>
+          </div>
+        </div>
+      )}
+
       <MathKeyboard
         visible={showKeyboard}
         onInsert={handleInsert}
         onBackspace={handleBackspace}
         onClear={() => { setInputVal(''); setError(null); inputRef.current?.focus() }}
         onConfirm={handleSubmit}
+        onAddParam={handleAddParam}
+        editing={!!editingId}
       />
     </div>
   )

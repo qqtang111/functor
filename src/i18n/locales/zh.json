@@ -118,5 +118,22 @@
   "keyboard.confirm": "确定 ✓",
 
   "toast.screenshot": "截图已保存",
-  "toast.screenshotFailed": "截图失败，请重试"
+  "toast.screenshotFailed": "截图失败，请重试",
+
+  "slider.title": "参数",
+  "slider.resetAll": "重置全部",
+
+  "seq.title": "数列设置",
+  "seq.displayPoints": "离散点",
+  "seq.displayLines": "点+线",
+  "seq.displayStaircase": "阶梯",
+  "seq.terms": "项数",
+  "seq.status": "状态",
+  "seq.converges": "收敛",
+  "seq.diverges": "发散",
+  "seq.oscillating": "震荡",
+  "seq.computing": "计算中...",
+  "seq.exactValue": "精确值",
+
+  "presets.sequences": "数列与级数"
 }

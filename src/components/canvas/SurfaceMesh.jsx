@@ -2,9 +2,9 @@ import { useMemo } from 'react'
 import * as THREE from 'three'
 import { sample3D } from '../../engine/MathEngine'
 
-export default function SurfaceMesh({ expr, color, range = [-5, 5], wireframe = false }) {
+export default function SurfaceMesh({ expr, color, range = [-5, 5], wireframe = false, nx = 80, ny = 80, params = {} }) {
   const geo = useMemo(() => {
-    const { positions, indices, colors } = sample3D(expr, range, 80, 80)
+    const { positions, indices, colors } = sample3D(expr, range, nx, ny, params)
 
     const geometry = new THREE.BufferGeometry()
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
@@ -12,7 +12,7 @@ export default function SurfaceMesh({ expr, color, range = [-5, 5], wireframe = 
     geometry.setIndex(new THREE.BufferAttribute(indices, 1))
     geometry.computeVertexNormals()
     return geometry
-  }, [expr, range[0], range[1]])
+  }, [expr, range[0], range[1], nx, ny, wireframe, JSON.stringify(params)])
 
   return (
     <mesh geometry={geo}>

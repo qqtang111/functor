@@ -12,6 +12,11 @@ export default function Canvas3D() {
   const wireframe = useViewStore((s) => s.wireframe)
   const contours = useViewStore((s) => s.contours)
 
+  // Phase 8: Parameter LOD — use 40 when params exist (conservative),
+  // 80 (full res) when no parameters or sliders not shown
+  const hasParams = visible.some((f) => f.parameters && Object.keys(f.parameters).length > 0)
+  const lodRes = hasParams ? 40 : 80
+
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <Canvas
@@ -31,12 +36,20 @@ export default function Canvas3D() {
 
         <axesHelper args={[7]} />
 
-        {visible.map((f) => (
-          <group key={f.id}>
-            <SurfaceMesh expr={f.expr} color={f.color} range={f.range} wireframe={wireframe} />
-            {contours && <ContourLines expr={f.expr} range={f.range} />}
-          </group>
-        ))}
+        {visible.map((f) => {
+          // Phase 8: Build parameter substitution object
+          const paramSubs = {}
+          if (f.parameters) {
+            for (const [k, v] of Object.entries(f.parameters)) paramSubs[k] = v.value
+          }
+          return (
+            <group key={f.id}>
+              <SurfaceMesh expr={f.expr} color={f.color} range={f.range} wireframe={wireframe}
+                nx={lodRes} ny={lodRes} params={paramSubs} />
+              {contours && <ContourLines expr={f.expr} range={f.range} params={paramSubs} />}
+            </group>
+          )
+        })}
 
         <OrbitControls
           enableDamping dampingFactor={0.08}
@@ -46,7 +59,6 @@ export default function Canvas3D() {
         />
       </Canvas>
 
-      {/* Color legend overlay */}
       {visible.length > 0 && <ColorLegend expr={visible[0].expr} range={visible[0].range} />}
     </div>
   )

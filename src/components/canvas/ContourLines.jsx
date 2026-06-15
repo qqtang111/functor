@@ -5,7 +5,7 @@ import { create, all } from 'mathjs'
 const math = create(all, {})
 
 /** Project contour rings onto XZ base plane */
-export default function ContourLines({ expr, range = [-5, 5], levels = 8, yBase = -6 }) {
+export default function ContourLines({ expr, range = [-5, 5], levels = 8, yBase = -6, params = {} }) {
   const contourGroups = useMemo(() => {
     const compiled = math.compile(expr)
     const [lo, hi] = range
@@ -21,7 +21,7 @@ export default function ContourLines({ expr, range = [-5, 5], levels = 8, yBase 
       for (let ix = 0; ix <= N; ix++) {
         const x = lo + ix * dx
         try {
-          const z = compiled.evaluate({ x, y })
+          const z = compiled.evaluate({ x, y, ...params })
           if (typeof z === 'number' && isFinite(z)) {
             row.push(z)
             if (z < zMin) zMin = z

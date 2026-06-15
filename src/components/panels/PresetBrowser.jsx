@@ -12,6 +12,7 @@ const CAT_KEY_MAP = {
   derivative: 'presets.derivative',
   parametric: 'presets.parametric',
   advanced: 'presets.advanced',
+  sequences: 'presets.sequences',
 }
 
 export default function PresetBrowser() {
@@ -31,9 +32,12 @@ export default function PresetBrowser() {
       })
     } else if (preset.type === 'parametric') {
       addFunction(preset.xt + ';' + preset.yt)
+    } else if (preset.mode === 'sequence' || preset.mode === 'partialSum') {
+      // Phase 8: Sequence / partial sum presets
+      addFunction(preset.expr, { mode: preset.mode, params: preset.params })
+      setMode('2D')
     } else {
-      addFunction(preset.expr)
-      // Auto-switch to 3D mode for 3D presets
+      addFunction(preset.expr, { params: preset.params })
       if (preset.dim === '3D') setMode('3D')
     }
   }
@@ -103,6 +107,12 @@ export default function PresetBrowser() {
                         )}
                         {p.type === 'derivative' && (
                           <span style={{ fontSize: '9px', color: '#22c55e', fontFamily: 'var(--font-mono)' }}>f+f'</span>
+                        )}
+                        {p.mode === 'sequence' && (
+                          <span style={{ fontSize: '9px', color: '#06b6d4', fontFamily: 'var(--font-mono)' }}>aₙ</span>
+                        )}
+                        {p.mode === 'partialSum' && (
+                          <span style={{ fontSize: '9px', color: '#f59e0b', fontFamily: 'var(--font-mono)' }}>Sₙ</span>
                         )}
                       </motion.div>
                     ))}

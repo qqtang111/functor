@@ -118,5 +118,22 @@
   "keyboard.confirm": "Confirm ✓",
 
   "toast.screenshot": "Screenshot saved",
-  "toast.screenshotFailed": "Screenshot failed, please retry"
+  "toast.screenshotFailed": "Screenshot failed, please retry",
+
+  "slider.title": "Parameters",
+  "slider.resetAll": "Reset All",
+
+  "seq.title": "Sequence Settings",
+  "seq.displayPoints": "Points",
+  "seq.displayLines": "Lines",
+  "seq.displayStaircase": "Stair",
+  "seq.terms": "Terms",
+  "seq.status": "Status",
+  "seq.converges": "Converges",
+  "seq.diverges": "Diverges",
+  "seq.oscillating": "Oscillating",
+  "seq.computing": "Computing...",
+  "seq.exactValue": "Exact",
+
+  "presets.sequences": "Sequences & Series"
 }
