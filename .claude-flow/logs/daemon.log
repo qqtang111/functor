@@ -1,0 +1,833 @@
+[2026-06-15T15:52:59.005Z] [INFO] Scheduled map (interval: 900s, first run in 0s)
+[2026-06-15T15:52:59.005Z] [INFO] Scheduled audit (interval: 600s, first run in 120s)
+[2026-06-15T15:52:59.006Z] [INFO] Scheduled optimize (interval: 900s, first run in 240s)
+[2026-06-15T15:52:59.006Z] [INFO] Scheduled consolidate (interval: 1800s, first run in 360s)
+[2026-06-15T15:52:59.007Z] [INFO] Scheduled testgaps (interval: 1200s, first run in 480s)
+[2026-06-15T15:52:59.009Z] [INFO] Daemon started (PID: 81616, CPUs: 32, workers: 5, maxCpuLoad: 25.6, minFreeMemoryPercent: 10%)
+[2026-06-15T15:52:59.009Z] [INFO] Claude Code headless mode available - AI workers enabled
+[2026-06-15T15:52:59.012Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-15T15:52:59.014Z] [INFO] Worker map completed in 4ms
+[2026-06-15T15:54:59.010Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-15T15:54:59.010Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-15T15:54:59.162Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-15T15:54:59.163Z] [INFO] Worker audit completed in 155ms
+[2026-06-15T15:56:59.008Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-15T15:56:59.009Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-15T15:56:59.018Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-15T15:56:59.019Z] [INFO] Worker optimize completed in 12ms
+[2026-06-15T15:58:59.014Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-15T15:58:59.015Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-15T16:00:59.010Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-15T16:00:59.011Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-15T16:00:59.017Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-15T16:00:59.018Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-15T16:04:59.177Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-15T16:04:59.178Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-15T16:04:59.327Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-15T16:04:59.328Z] [INFO] Worker audit completed in 153ms
+[2026-06-15T16:07:59.024Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-15T16:07:59.025Z] [INFO] Worker map completed in 3ms
+[2026-06-16T06:12:31.794Z] [INFO] Scheduled map (interval: 900s, first run in 0s)
+[2026-06-16T06:12:31.795Z] [INFO] Scheduled audit (interval: 600s, first run in 120s)
+[2026-06-16T06:12:31.796Z] [INFO] Scheduled optimize (interval: 900s, first run in 240s)
+[2026-06-16T06:12:31.796Z] [INFO] Scheduled consolidate (interval: 1800s, first run in 360s)
+[2026-06-16T06:12:31.796Z] [INFO] Scheduled testgaps (interval: 1200s, first run in 480s)
+[2026-06-16T06:12:31.798Z] [INFO] Daemon started (PID: 104988, CPUs: 32, workers: 5, maxCpuLoad: 25.6, minFreeMemoryPercent: 10%)
+[2026-06-16T06:12:31.799Z] [INFO] Claude Code headless mode available - AI workers enabled
+[2026-06-16T06:12:31.801Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T06:12:31.802Z] [INFO] Worker map completed in 3ms
+[2026-06-16T06:14:31.809Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T06:14:31.810Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T06:14:31.968Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:14:31.969Z] [INFO] Worker audit completed in 162ms
+[2026-06-16T06:16:31.807Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T06:16:31.807Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T06:16:31.815Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:16:31.816Z] [INFO] Worker optimize completed in 11ms
+[2026-06-16T06:18:31.806Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T06:18:31.807Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T06:20:31.814Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T06:20:31.815Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T06:20:31.821Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:20:31.822Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T06:24:31.980Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T06:24:31.981Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T06:24:32.149Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:24:32.150Z] [INFO] Worker audit completed in 172ms
+[2026-06-16T06:27:31.813Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T06:27:31.814Z] [INFO] Worker map completed in 3ms
+[2026-06-16T06:31:31.829Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T06:31:31.830Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T06:31:31.838Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:31:31.839Z] [INFO] Worker optimize completed in 11ms
+[2026-06-16T06:34:32.157Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T06:34:32.157Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T06:34:32.306Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:34:32.306Z] [INFO] Worker audit completed in 151ms
+[2026-06-16T06:40:31.835Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T06:40:31.835Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T06:40:31.841Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:40:31.841Z] [INFO] Worker testgaps completed in 8ms
+[2026-06-16T06:42:31.828Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T06:42:31.829Z] [INFO] Worker map completed in 2ms
+[2026-06-16T06:44:32.314Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T06:44:32.315Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T06:44:32.462Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:44:32.463Z] [INFO] Worker audit completed in 150ms
+[2026-06-16T06:46:31.854Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T06:46:31.854Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T06:46:31.863Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:46:31.864Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T06:48:31.819Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T06:48:31.820Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T06:54:32.468Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T06:54:32.468Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T06:54:32.619Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T06:54:32.620Z] [INFO] Worker audit completed in 154ms
+[2026-06-16T06:57:31.843Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T06:57:31.844Z] [INFO] Worker map completed in 3ms
+[2026-06-16T07:00:31.851Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T07:00:31.851Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T07:00:31.857Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:00:31.859Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T07:01:31.877Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T07:01:31.877Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T07:01:31.885Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:01:31.886Z] [INFO] Worker optimize completed in 11ms
+[2026-06-16T07:04:32.632Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:04:32.632Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:04:32.782Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:04:32.783Z] [INFO] Worker audit completed in 153ms
+[2026-06-16T07:12:31.858Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T07:12:31.859Z] [INFO] Worker map completed in 3ms
+[2026-06-16T07:14:32.796Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:14:32.797Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:14:32.949Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:14:32.950Z] [INFO] Worker audit completed in 155ms
+[2026-06-16T07:16:31.894Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T07:16:31.895Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T07:16:31.905Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:16:31.906Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T07:18:31.829Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T07:18:31.831Z] [INFO] Worker consolidate completed in 4ms
+[2026-06-16T07:20:31.869Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T07:20:31.870Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T07:20:31.878Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:20:31.879Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T07:24:32.967Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:24:32.968Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:24:33.191Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:24:33.192Z] [INFO] Worker audit completed in 227ms
+[2026-06-16T07:27:31.869Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T07:27:31.870Z] [INFO] Worker map completed in 3ms
+[2026-06-16T07:31:31.923Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T07:31:31.923Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T07:31:31.934Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:31:31.936Z] [INFO] Worker optimize completed in 15ms
+[2026-06-16T07:34:33.198Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:34:33.198Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:34:33.351Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:34:33.353Z] [INFO] Worker audit completed in 158ms
+[2026-06-16T07:40:31.891Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T07:40:31.891Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T07:40:31.898Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:40:31.899Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T07:42:31.874Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T07:42:31.875Z] [INFO] Worker map completed in 3ms
+[2026-06-16T07:44:33.364Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:44:33.364Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:44:33.516Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:44:33.517Z] [INFO] Worker audit completed in 155ms
+[2026-06-16T07:46:31.940Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T07:46:31.940Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T07:46:31.950Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:46:31.951Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T07:48:31.847Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T07:48:31.848Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T07:54:33.526Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T07:54:33.526Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T07:54:33.692Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T07:54:33.693Z] [INFO] Worker audit completed in 169ms
+[2026-06-16T07:57:31.884Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T07:57:31.885Z] [INFO] Worker map completed in 3ms
+[2026-06-16T08:00:31.911Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T08:00:31.911Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T08:00:31.918Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:00:31.919Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T08:01:31.965Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T08:01:31.965Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T08:01:31.975Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:01:31.976Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T08:04:33.708Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:04:33.709Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:04:33.872Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:04:33.873Z] [INFO] Worker audit completed in 167ms
+[2026-06-16T08:12:31.900Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T08:12:31.901Z] [INFO] Worker map completed in 3ms
+[2026-06-16T08:14:33.881Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:14:33.881Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:14:34.036Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:14:34.037Z] [INFO] Worker audit completed in 158ms
+[2026-06-16T08:16:31.981Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T08:16:31.981Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T08:16:31.992Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:16:31.993Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T08:18:31.866Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T08:18:31.867Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T08:20:31.935Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T08:20:31.936Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T08:20:31.943Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:20:31.944Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T08:24:34.042Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:24:34.043Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:24:34.272Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:24:34.273Z] [INFO] Worker audit completed in 233ms
+[2026-06-16T08:27:31.910Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T08:27:31.911Z] [INFO] Worker map completed in 3ms
+[2026-06-16T08:31:32.004Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T08:31:32.004Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T08:31:32.015Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:31:32.016Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T08:34:34.287Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:34:34.288Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:34:34.436Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:34:34.437Z] [INFO] Worker audit completed in 152ms
+[2026-06-16T08:40:31.949Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T08:40:31.949Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T08:40:31.956Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:40:31.957Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T08:42:31.926Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T08:42:31.927Z] [INFO] Worker map completed in 3ms
+[2026-06-16T08:44:34.452Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:44:34.452Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:44:34.604Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:44:34.604Z] [INFO] Worker audit completed in 155ms
+[2026-06-16T08:46:32.028Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T08:46:32.028Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T08:46:32.038Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:46:32.038Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T08:48:31.881Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T08:48:31.882Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T08:54:34.620Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T08:54:34.620Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T08:54:34.799Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T08:54:34.800Z] [INFO] Worker audit completed in 182ms
+[2026-06-16T08:57:31.940Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T08:57:31.941Z] [INFO] Worker map completed in 3ms
+[2026-06-16T09:00:31.974Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T09:00:31.974Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T09:00:31.981Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:00:31.983Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T09:01:32.046Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T09:01:32.047Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T09:01:32.057Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:01:32.058Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T09:04:34.810Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:04:34.811Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:04:34.972Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:04:34.973Z] [INFO] Worker audit completed in 166ms
+[2026-06-16T09:12:31.949Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T09:12:31.950Z] [INFO] Worker map completed in 3ms
+[2026-06-16T09:14:34.988Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:14:34.988Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:14:35.152Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:14:35.152Z] [INFO] Worker audit completed in 166ms
+[2026-06-16T09:16:32.070Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T09:16:32.070Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T09:16:32.081Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:16:32.082Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T09:18:31.889Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T09:18:31.890Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T09:20:32.000Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T09:20:32.000Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T09:20:32.008Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:20:32.009Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T09:24:35.157Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:24:35.158Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:24:35.348Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:24:35.349Z] [INFO] Worker audit completed in 194ms
+[2026-06-16T09:27:31.961Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T09:27:31.962Z] [INFO] Worker map completed in 3ms
+[2026-06-16T09:31:32.095Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T09:31:32.095Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T09:31:32.105Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:31:32.106Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T09:34:35.357Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:34:35.358Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:34:35.523Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:34:35.524Z] [INFO] Worker audit completed in 169ms
+[2026-06-16T09:40:32.018Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T09:40:32.019Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T09:40:32.024Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:40:32.025Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T09:42:31.977Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T09:42:31.978Z] [INFO] Worker map completed in 3ms
+[2026-06-16T09:44:35.536Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:44:35.536Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:44:35.688Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:44:35.689Z] [INFO] Worker audit completed in 155ms
+[2026-06-16T09:46:32.113Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T09:46:32.113Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T09:46:32.123Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:46:32.124Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T09:48:31.905Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T09:48:31.906Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T09:54:35.693Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T09:54:35.693Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T09:54:35.847Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T09:54:35.848Z] [INFO] Worker audit completed in 157ms
+[2026-06-16T09:57:31.992Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T09:57:31.993Z] [INFO] Worker map completed in 2ms
+[2026-06-16T10:00:32.038Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T10:00:32.038Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T10:00:32.045Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:00:32.045Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T10:01:32.142Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T10:01:32.142Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T10:01:32.154Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:01:32.155Z] [INFO] Worker optimize completed in 15ms
+[2026-06-16T10:04:35.857Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:04:35.857Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:04:36.057Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:04:36.058Z] [INFO] Worker audit completed in 204ms
+[2026-06-16T10:12:32.004Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T10:12:32.005Z] [INFO] Worker map completed in 3ms
+[2026-06-16T10:14:36.066Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:14:36.066Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:14:36.231Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:14:36.232Z] [INFO] Worker audit completed in 168ms
+[2026-06-16T10:16:32.171Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T10:16:32.171Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T10:16:32.182Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:16:32.183Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T10:18:31.919Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T10:18:31.920Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T10:20:32.059Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T10:20:32.060Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T10:20:32.069Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:20:32.070Z] [INFO] Worker testgaps completed in 13ms
+[2026-06-16T10:24:36.246Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:24:36.246Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:24:36.408Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:24:36.409Z] [INFO] Worker audit completed in 166ms
+[2026-06-16T10:27:32.018Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T10:27:32.019Z] [INFO] Worker map completed in 3ms
+[2026-06-16T10:31:32.196Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T10:31:32.196Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T10:31:32.206Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:31:32.207Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T10:34:36.428Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:34:36.429Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:34:36.663Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:34:36.664Z] [INFO] Worker audit completed in 238ms
+[2026-06-16T10:40:32.083Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T10:40:32.083Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T10:40:32.092Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:40:32.092Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T10:42:32.027Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T10:42:32.029Z] [INFO] Worker map completed in 4ms
+[2026-06-16T10:44:36.680Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:44:36.680Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:44:36.842Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:44:36.843Z] [INFO] Worker audit completed in 165ms
+[2026-06-16T10:46:32.223Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T10:46:32.223Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T10:46:32.232Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:46:32.233Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T10:48:31.936Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T10:48:31.937Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T10:54:36.862Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T10:54:36.862Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T10:54:37.018Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T10:54:37.018Z] [INFO] Worker audit completed in 159ms
+[2026-06-16T10:57:32.045Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T10:57:32.046Z] [INFO] Worker map completed in 3ms
+[2026-06-16T11:00:32.108Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T11:00:32.108Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T11:00:32.116Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:00:32.117Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T11:01:32.240Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T11:01:32.240Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T11:01:32.250Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:01:32.251Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T11:04:37.023Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:04:37.024Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:04:37.183Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:04:37.184Z] [INFO] Worker audit completed in 162ms
+[2026-06-16T11:12:32.060Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T11:12:32.061Z] [INFO] Worker map completed in 4ms
+[2026-06-16T11:14:37.198Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:14:37.199Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:14:37.352Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:14:37.353Z] [INFO] Worker audit completed in 157ms
+[2026-06-16T11:16:32.263Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T11:16:32.263Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T11:16:32.274Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:16:32.275Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T11:18:31.943Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T11:18:31.944Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T11:20:32.121Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T11:20:32.121Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T11:20:32.129Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:20:32.129Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T11:24:37.368Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:24:37.369Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:24:37.522Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:24:37.522Z] [INFO] Worker audit completed in 156ms
+[2026-06-16T11:27:32.078Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T11:27:32.079Z] [INFO] Worker map completed in 3ms
+[2026-06-16T11:31:32.280Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T11:31:32.280Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T11:31:32.291Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:31:32.291Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T11:34:37.539Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:34:37.539Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:34:37.762Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:34:37.762Z] [INFO] Worker audit completed in 225ms
+[2026-06-16T11:40:32.141Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T11:40:32.141Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T11:40:32.149Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:40:32.150Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T11:42:32.098Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T11:42:32.099Z] [INFO] Worker map completed in 3ms
+[2026-06-16T11:44:37.772Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:44:37.773Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:44:37.930Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:44:37.931Z] [INFO] Worker audit completed in 161ms
+[2026-06-16T11:46:32.304Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T11:46:32.304Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T11:46:32.315Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:46:32.316Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T11:48:31.952Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T11:48:31.953Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T11:54:37.946Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T11:54:37.946Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T11:54:38.102Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T11:54:38.102Z] [INFO] Worker audit completed in 158ms
+[2026-06-16T11:57:32.110Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T11:57:32.111Z] [INFO] Worker map completed in 3ms
+[2026-06-16T12:00:32.158Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T12:00:32.158Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T12:00:32.167Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:00:32.168Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T12:01:32.335Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T12:01:32.335Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T12:01:32.345Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:01:32.346Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T12:04:38.111Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:04:38.111Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:04:38.267Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:04:38.268Z] [INFO] Worker audit completed in 160ms
+[2026-06-16T12:12:32.120Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T12:12:32.121Z] [INFO] Worker map completed in 3ms
+[2026-06-16T12:14:38.273Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:14:38.274Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:14:38.435Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:14:38.436Z] [INFO] Worker audit completed in 165ms
+[2026-06-16T12:16:32.350Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T12:16:32.350Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T12:16:32.360Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:16:32.361Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T12:18:31.968Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T12:18:31.969Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T12:20:32.185Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T12:20:32.185Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T12:20:32.194Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:20:32.195Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T12:24:38.441Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:24:38.441Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:24:38.595Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:24:38.597Z] [INFO] Worker audit completed in 158ms
+[2026-06-16T12:27:32.130Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T12:27:32.131Z] [INFO] Worker map completed in 4ms
+[2026-06-16T12:31:32.364Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T12:31:32.365Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T12:31:32.375Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:31:32.376Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T12:34:38.616Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:34:38.616Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:34:38.841Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:34:38.842Z] [INFO] Worker audit completed in 228ms
+[2026-06-16T12:40:32.210Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T12:40:32.210Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T12:40:32.219Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:40:32.220Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T12:42:32.146Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T12:42:32.147Z] [INFO] Worker map completed in 3ms
+[2026-06-16T12:44:38.853Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:44:38.853Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:44:39.012Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:44:39.013Z] [INFO] Worker audit completed in 162ms
+[2026-06-16T12:46:32.389Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T12:46:32.389Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T12:46:32.400Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:46:32.400Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T12:48:31.985Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T12:48:31.986Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T12:54:39.019Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T12:54:39.020Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T12:54:39.168Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T12:54:39.169Z] [INFO] Worker audit completed in 152ms
+[2026-06-16T12:57:32.153Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T12:57:32.154Z] [INFO] Worker map completed in 3ms
+[2026-06-16T13:00:32.238Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T13:00:32.239Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T13:00:32.246Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:00:32.247Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T13:01:32.409Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T13:01:32.410Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T13:01:32.420Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:01:32.421Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T13:04:39.175Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:04:39.176Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:04:39.327Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:04:39.328Z] [INFO] Worker audit completed in 155ms
+[2026-06-16T13:12:32.170Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T13:12:32.171Z] [INFO] Worker map completed in 3ms
+[2026-06-16T13:14:39.332Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:14:39.332Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:14:39.486Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:14:39.487Z] [INFO] Worker audit completed in 157ms
+[2026-06-16T13:16:32.426Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T13:16:32.426Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T13:16:32.437Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:16:32.437Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T13:18:32.001Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T13:18:32.002Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T13:20:32.259Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T13:20:32.259Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T13:20:32.268Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:20:32.269Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T13:24:39.498Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:24:39.498Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:24:39.666Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:24:39.667Z] [INFO] Worker audit completed in 171ms
+[2026-06-16T13:27:32.177Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T13:27:32.178Z] [INFO] Worker map completed in 3ms
+[2026-06-16T13:31:32.454Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T13:31:32.454Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T13:31:32.466Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:31:32.467Z] [INFO] Worker optimize completed in 15ms
+[2026-06-16T13:34:39.675Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:34:39.675Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:34:39.911Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:34:39.912Z] [INFO] Worker audit completed in 239ms
+[2026-06-16T13:40:32.281Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T13:40:32.282Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T13:40:32.290Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:40:32.291Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T13:42:32.191Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T13:42:32.192Z] [INFO] Worker map completed in 3ms
+[2026-06-16T13:44:39.929Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:44:39.929Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:44:40.086Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:44:40.087Z] [INFO] Worker audit completed in 161ms
+[2026-06-16T13:46:32.482Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T13:46:32.482Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T13:46:32.492Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:46:32.493Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T13:48:32.014Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T13:48:32.015Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T13:54:40.106Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T13:54:40.106Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T13:54:40.260Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T13:54:40.261Z] [INFO] Worker audit completed in 157ms
+[2026-06-16T13:57:32.197Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T13:57:32.199Z] [INFO] Worker map completed in 4ms
+[2026-06-16T14:00:32.305Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T14:00:32.305Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T14:00:32.314Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:00:32.315Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T14:01:32.500Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T14:01:32.500Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T14:01:32.511Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:01:32.512Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T14:04:40.278Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:04:40.278Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:04:40.444Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:04:40.445Z] [INFO] Worker audit completed in 169ms
+[2026-06-16T14:12:32.209Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T14:12:32.211Z] [INFO] Worker map completed in 3ms
+[2026-06-16T14:14:40.457Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:14:40.457Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:14:40.660Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:14:40.661Z] [INFO] Worker audit completed in 206ms
+[2026-06-16T14:16:32.530Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T14:16:32.530Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T14:16:32.542Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:16:32.543Z] [INFO] Worker optimize completed in 15ms
+[2026-06-16T14:18:32.019Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T14:18:32.019Z] [INFO] Worker consolidate completed in 2ms
+[2026-06-16T14:20:32.327Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T14:20:32.327Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T14:20:32.336Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:20:32.337Z] [INFO] Worker testgaps completed in 12ms
+[2026-06-16T14:24:40.678Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:24:40.678Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:24:40.892Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:24:40.893Z] [INFO] Worker audit completed in 217ms
+[2026-06-16T14:27:32.225Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T14:27:32.226Z] [INFO] Worker map completed in 3ms
+[2026-06-16T14:31:02.216Z] [INFO] Scheduled map (interval: 900s, first run in 690.01s)
+[2026-06-16T14:31:02.217Z] [INFO] Scheduled audit (interval: 600s, first run in 218.676s)
+[2026-06-16T14:31:02.217Z] [INFO] Scheduled optimize (interval: 900s, first run in 240s)
+[2026-06-16T14:31:02.217Z] [INFO] Scheduled consolidate (interval: 1800s, first run in 1049.802s)
+[2026-06-16T14:31:02.217Z] [INFO] Scheduled testgaps (interval: 1200s, first run in 570.12s)
+[2026-06-16T14:31:02.219Z] [INFO] Daemon started (PID: 39676, CPUs: 32, workers: 5, maxCpuLoad: 25.6, minFreeMemoryPercent: 10%)
+[2026-06-16T14:31:02.219Z] [INFO] Claude Code headless mode available - AI workers enabled
+[2026-06-16T14:34:40.904Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:34:40.905Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:34:41.065Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:34:41.066Z] [INFO] Worker audit completed in 163ms
+[2026-06-16T14:35:02.229Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T14:35:02.229Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T14:35:02.236Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:35:02.237Z] [INFO] Worker optimize completed in 9ms
+[2026-06-16T14:40:32.342Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T14:40:32.343Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T14:40:32.348Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:40:32.349Z] [INFO] Worker testgaps completed in 8ms
+[2026-06-16T14:42:32.241Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T14:42:32.242Z] [INFO] Worker map completed in 2ms
+[2026-06-16T14:44:41.072Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:44:41.072Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:44:41.217Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:44:41.218Z] [INFO] Worker audit completed in 148ms
+[2026-06-16T14:48:32.032Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T14:48:32.033Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T14:50:02.251Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T14:50:02.252Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T14:50:02.260Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:50:02.261Z] [INFO] Worker optimize completed in 11ms
+[2026-06-16T14:54:41.224Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T14:54:41.225Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T14:54:41.380Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T14:54:41.381Z] [INFO] Worker audit completed in 159ms
+[2026-06-16T14:57:32.254Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T14:57:32.256Z] [INFO] Worker map completed in 3ms
+[2026-06-16T15:00:32.361Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T15:00:32.361Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T15:00:32.368Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:00:32.369Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T15:04:41.398Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:04:41.398Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:04:41.573Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:04:41.574Z] [INFO] Worker audit completed in 177ms
+[2026-06-16T15:05:02.278Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T15:05:02.279Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T15:05:02.288Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:05:02.289Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T15:12:32.272Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T15:12:32.273Z] [INFO] Worker map completed in 3ms
+[2026-06-16T15:14:41.581Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:14:41.581Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:14:41.761Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:14:41.762Z] [INFO] Worker audit completed in 183ms
+[2026-06-16T15:18:32.050Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T15:18:32.051Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T15:20:02.305Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T15:20:02.305Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T15:20:02.318Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:20:02.319Z] [INFO] Worker optimize completed in 16ms
+[2026-06-16T15:20:32.377Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T15:20:32.377Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T15:20:32.383Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:20:32.383Z] [INFO] Worker testgaps completed in 8ms
+[2026-06-16T15:24:41.767Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:24:41.767Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:24:41.950Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:24:41.951Z] [INFO] Worker audit completed in 186ms
+[2026-06-16T15:27:32.282Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T15:27:32.284Z] [INFO] Worker map completed in 3ms
+[2026-06-16T15:34:41.955Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:34:41.955Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:34:42.181Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:34:42.182Z] [INFO] Worker audit completed in 229ms
+[2026-06-16T15:35:02.325Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T15:35:02.325Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T15:35:02.334Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:35:02.335Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T15:40:32.388Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T15:40:32.389Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T15:40:32.395Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:40:32.396Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T15:42:32.291Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T15:42:32.292Z] [INFO] Worker map completed in 3ms
+[2026-06-16T15:44:42.193Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:44:42.194Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:44:42.396Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:44:42.397Z] [INFO] Worker audit completed in 206ms
+[2026-06-16T15:48:32.066Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T15:48:32.067Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T15:50:02.348Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T15:50:02.349Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T15:50:02.358Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:50:02.359Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T15:54:42.407Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T15:54:42.408Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T15:54:42.662Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T15:54:42.663Z] [INFO] Worker audit completed in 257ms
+[2026-06-16T15:57:32.296Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T15:57:32.298Z] [INFO] Worker map completed in 3ms
+[2026-06-16T16:00:32.400Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T16:00:32.400Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T16:00:32.410Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:00:32.411Z] [INFO] Worker testgaps completed in 13ms
+[2026-06-16T16:04:42.679Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:04:42.680Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:04:42.978Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:04:42.979Z] [INFO] Worker audit completed in 302ms
+[2026-06-16T16:05:02.368Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T16:05:02.369Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T16:05:02.379Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:05:02.380Z] [INFO] Worker optimize completed in 13ms
+[2026-06-16T16:12:32.314Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T16:12:32.315Z] [INFO] Worker map completed in 3ms
+[2026-06-16T16:14:42.993Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:14:42.994Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:14:43.266Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:14:43.267Z] [INFO] Worker audit completed in 275ms
+[2026-06-16T16:18:32.072Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T16:18:32.073Z] [INFO] Worker consolidate completed in 2ms
+[2026-06-16T16:20:02.393Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T16:20:02.394Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T16:20:02.405Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:20:02.406Z] [INFO] Worker optimize completed in 15ms
+[2026-06-16T16:20:32.425Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T16:20:32.426Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T16:20:32.434Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:20:32.434Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T16:24:43.275Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:24:43.276Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:24:43.533Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:24:43.534Z] [INFO] Worker audit completed in 261ms
+[2026-06-16T16:27:32.320Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T16:27:32.322Z] [INFO] Worker map completed in 3ms
+[2026-06-16T16:34:43.542Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:34:43.543Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:34:43.799Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:34:43.800Z] [INFO] Worker audit completed in 261ms
+[2026-06-16T16:35:02.417Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T16:35:02.417Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T16:35:02.427Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:35:02.429Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T16:40:32.448Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T16:40:32.448Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T16:40:32.455Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:40:32.456Z] [INFO] Worker testgaps completed in 10ms
+[2026-06-16T16:42:32.333Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T16:42:32.334Z] [INFO] Worker map completed in 3ms
+[2026-06-16T16:44:43.817Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:44:43.817Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:44:44.076Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:44:44.077Z] [INFO] Worker audit completed in 262ms
+[2026-06-16T16:48:32.080Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T16:48:32.081Z] [INFO] Worker consolidate completed in 3ms
+[2026-06-16T16:50:02.440Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T16:50:02.440Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T16:50:02.451Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:50:02.452Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T16:54:44.096Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T16:54:44.097Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T16:54:44.285Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T16:54:44.285Z] [INFO] Worker audit completed in 191ms
+[2026-06-16T16:57:32.351Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T16:57:32.353Z] [INFO] Worker map completed in 3ms
+[2026-06-16T17:00:32.470Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T17:00:32.471Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T17:00:32.478Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:00:32.479Z] [INFO] Worker testgaps completed in 11ms
+[2026-06-16T17:04:44.303Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:04:44.304Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:04:44.561Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:04:44.562Z] [INFO] Worker audit completed in 261ms
+[2026-06-16T17:05:02.457Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T17:05:02.458Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T17:05:02.468Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:05:02.469Z] [INFO] Worker optimize completed in 14ms
+[2026-06-16T17:12:32.365Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T17:12:32.367Z] [INFO] Worker map completed in 4ms
+[2026-06-16T17:14:44.567Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:14:44.567Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:14:44.834Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:14:44.835Z] [INFO] Worker audit completed in 270ms
+[2026-06-16T17:18:32.094Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T17:18:32.095Z] [INFO] Worker consolidate completed in 2ms
+[2026-06-16T17:20:02.478Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T17:20:02.479Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T17:20:02.488Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:20:02.489Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T17:20:32.490Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T17:20:32.491Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T17:20:32.496Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:20:32.497Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T17:24:44.840Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:24:44.840Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:24:45.010Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:24:45.010Z] [INFO] Worker audit completed in 172ms
+[2026-06-16T17:27:32.375Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T17:27:32.376Z] [INFO] Worker map completed in 3ms
+[2026-06-16T17:34:45.023Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:34:45.024Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:34:45.198Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:34:45.199Z] [INFO] Worker audit completed in 177ms
+[2026-06-16T17:35:02.496Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T17:35:02.497Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T17:35:02.504Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:35:02.505Z] [INFO] Worker optimize completed in 10ms
+[2026-06-16T17:40:32.502Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T17:40:32.503Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T17:40:32.509Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:40:32.510Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T17:42:32.381Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T17:42:32.383Z] [INFO] Worker map completed in 3ms
+[2026-06-16T17:44:45.206Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:44:45.206Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:44:45.368Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:44:45.369Z] [INFO] Worker audit completed in 164ms
+[2026-06-16T17:48:32.099Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T17:48:32.099Z] [INFO] Worker consolidate completed in 2ms
+[2026-06-16T17:50:02.514Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T17:50:02.514Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T17:50:02.523Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:50:02.524Z] [INFO] Worker optimize completed in 12ms
+[2026-06-16T17:54:45.382Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T17:54:45.382Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T17:54:45.584Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T17:54:45.584Z] [INFO] Worker audit completed in 204ms
+[2026-06-16T17:57:32.386Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T17:57:32.387Z] [INFO] Worker map completed in 2ms
+[2026-06-16T18:00:32.519Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T18:00:32.519Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T18:00:32.525Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:00:32.526Z] [INFO] Worker testgaps completed in 9ms
+[2026-06-16T18:04:45.594Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T18:04:45.594Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T18:04:45.793Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:04:45.794Z] [INFO] Worker audit completed in 201ms
+[2026-06-16T18:05:02.529Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T18:05:02.529Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T18:05:02.536Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:05:02.537Z] [INFO] Worker optimize completed in 11ms
+[2026-06-16T18:12:32.405Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T18:12:32.406Z] [INFO] Worker map completed in 3ms
+[2026-06-16T18:14:45.800Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T18:14:45.801Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T18:14:45.999Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:14:46.001Z] [INFO] Worker audit completed in 202ms
+[2026-06-16T18:18:32.104Z] [INFO] Starting worker: consolidate (1/2 concurrent)
+[2026-06-16T18:18:32.105Z] [INFO] Worker consolidate completed in 2ms
+[2026-06-16T18:20:02.548Z] [INFO] Starting worker: optimize (1/2 concurrent)
+[2026-06-16T18:20:02.549Z] [INFO] Running optimize in headless mode (Claude Code AI)
+[2026-06-16T18:20:02.557Z] [WARN] Headless optimize returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:20:02.557Z] [INFO] Worker optimize completed in 10ms
+[2026-06-16T18:20:32.544Z] [INFO] Starting worker: testgaps (1/2 concurrent)
+[2026-06-16T18:20:32.544Z] [INFO] Running testgaps in headless mode (Claude Code AI)
+[2026-06-16T18:20:32.549Z] [WARN] Headless testgaps returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:20:32.550Z] [INFO] Worker testgaps completed in 8ms
+[2026-06-16T18:24:46.011Z] [INFO] Starting worker: audit (1/2 concurrent)
+[2026-06-16T18:24:46.012Z] [INFO] Running audit in headless mode (Claude Code AI)
+[2026-06-16T18:24:46.191Z] [WARN] Headless audit returned success=false (spawn claude ENOENT); falling back to local mode
+[2026-06-16T18:24:46.192Z] [INFO] Worker audit completed in 182ms
+[2026-06-16T18:27:32.419Z] [INFO] Starting worker: map (1/2 concurrent)
+[2026-06-16T18:27:32.420Z] [INFO] Worker map completed in 3ms

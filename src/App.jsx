@@ -16,20 +16,17 @@ function App() {
   const [showTutorial, setShowTutorial] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(true)
 
-  useEffect(() => {
-    initTheme()
-    initI18n()
-    const splashTimer = setTimeout(() => {
-      setShowSplash(false)
-      const done = localStorage.getItem('functor-tutorial-done')
-      if (!done) setShowTutorial(true)
-    }, 2000)
-    return () => clearTimeout(splashTimer)
-  }, [])
+  useEffect(() => { initTheme(); initI18n() }, [])
+
+  const handleStart = () => {
+    setShowSplash(false)
+    const done = localStorage.getItem('functor-tutorial-done')
+    if (!done) setShowTutorial(true)
+  }
 
   const toggleSidebar = () => setSidebarOpen((v) => !v)
 
-  if (showSplash) return <SplashScreen />
+  if (showSplash) return <SplashScreen onStart={handleStart} />
 
   return (
     <div className="app-root" style={{

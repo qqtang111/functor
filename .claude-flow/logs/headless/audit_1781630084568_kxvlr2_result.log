@@ -1,0 +1,13 @@
+[2026-06-16T17:14:44.833Z] RESULT
+============================================================
+{
+  "success": false,
+  "output": "",
+  "durationMs": 265,
+  "model": "haiku",
+  "sandboxMode": "strict",
+  "workerType": "audit",
+  "timestamp": "2026-06-16T17:14:44.833Z",
+  "executionId": "audit_1781630084568_kxvlr2",
+  "error": "spawn claude ENOENT"
+}
