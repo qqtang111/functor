@@ -277,6 +277,7 @@ export default function FunctionInput() {
 
       <MathKeyboard
         visible={showKeyboard}
+        currentExpr={inputVal}
         onInsert={handleInsert}
         onBackspace={handleBackspace}
         onClear={() => { setInputVal(''); setError(null); inputRef.current?.focus() }}

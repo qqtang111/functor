@@ -1,52 +1,93 @@
-body.theme-glass-dark {
-  --bg-primary: #0a0a1a; --bg-secondary: #0f0f23;
-  --bg-glass: rgba(15, 15, 40, 0.6);
+/* ═══════════════════════════════════════════
+   Functor Theme System — 5 styles + accent
+   ═══════════════════════════════════════════ */
+
+/* 1. Dark Premium — 暗黑高级 (DEFAULT) */
+body.theme-dark-premium {
+  --bg-primary: #0F0F0F; --bg-secondary: #1A1A1A;
+  --bg-glass: rgba(15, 15, 15, 0.65);
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-medium: rgba(255, 255, 255, 0.12);
   --accent: #6366f1; --accent-glow: rgba(99, 102, 241, 0.3);
-  --text-primary: rgba(255, 255, 255, 0.85);
+  --text-primary: rgba(255, 255, 255, 0.88);
   --text-secondary: rgba(255, 255, 255, 0.5);
-  --text-muted: rgba(255, 255, 255, 0.25);
+  --text-muted: rgba(255, 255, 255, 0.28);
   --surface: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.06);
   --danger: #f87171;
+  --grid-fine: rgba(255,255,255,0.03);
+  --grid-main: rgba(255,255,255,0.06);
+  --axis: rgba(255,255,255,0.12);
 }
-body.theme-light-premium {
-  --bg-primary: #f8faff; --bg-secondary: #eef2ff;
-  --bg-glass: rgba(255, 255, 255, 0.7);
+
+/* 2. Corporate Cyan — 极简科技 */
+body.theme-corporate-cyan {
+  --bg-primary: #0F172A; --bg-secondary: #1E3A8A;
+  --bg-glass: rgba(15, 23, 42, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --accent: #06B6D4; --accent-glow: rgba(6, 182, 212, 0.25);
+  --text-primary: rgba(226, 232, 240, 0.9);
+  --text-secondary: rgba(226, 232, 240, 0.5);
+  --text-muted: rgba(226, 232, 240, 0.3);
+  --surface: rgba(6, 182, 212, 0.03);
+  --surface-hover: rgba(6, 182, 212, 0.08);
+  --danger: #f87171;
+  --grid-fine: rgba(255,255,255,0.025);
+  --grid-main: rgba(255,255,255,0.05);
+  --axis: rgba(255,255,255,0.1);
+}
+
+/* 3. Geometric Modern — 几何未来 */
+body.theme-geometric-modern {
+  --bg-primary: #0B0E14; --bg-secondary: #1E1E2E;
+  --bg-glass: rgba(11, 14, 20, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --accent: #818CF8; --accent-glow: rgba(129, 140, 248, 0.3);
+  --text-primary: rgba(228, 228, 231, 0.9);
+  --text-secondary: rgba(228, 228, 231, 0.5);
+  --text-muted: rgba(228, 228, 231, 0.28);
+  --surface: rgba(129, 140, 248, 0.04);
+  --surface-hover: rgba(129, 140, 248, 0.08);
+  --danger: #f87171;
+  --grid-fine: rgba(255,255,255,0.025);
+  --grid-main: rgba(255,255,255,0.05);
+  --axis: rgba(255,255,255,0.1);
+}
+
+/* 4. Scandinavian Light — 白昼学术 */
+body.theme-scandinavian-light {
+  --bg-primary: #FFFFFF; --bg-secondary: #F5F5F5;
+  --bg-glass: rgba(255, 255, 255, 0.8);
   --border-subtle: rgba(0, 0, 0, 0.06);
   --border-medium: rgba(0, 0, 0, 0.12);
-  --accent: #8b5cf6; --accent-glow: rgba(139, 92, 246, 0.2);
-  --text-primary: rgba(15, 23, 42, 0.9);
+  --accent: #2563EB; --accent-glow: rgba(37, 99, 235, 0.15);
+  --text-primary: rgba(15, 23, 42, 0.88);
   --text-secondary: rgba(15, 23, 42, 0.5);
   --text-muted: rgba(15, 23, 42, 0.3);
   --surface: rgba(0, 0, 0, 0.02);
   --surface-hover: rgba(0, 0, 0, 0.05);
   --danger: #ef4444;
+  --grid-fine: rgba(0,0,0,0.04);
+  --grid-main: rgba(0,0,0,0.08);
+  --axis: rgba(0,0,0,0.15);
 }
-body.theme-cyber {
-  --bg-primary: #0a0a0a; --bg-secondary: #141414;
-  --bg-glass: rgba(10, 10, 10, 0.8);
-  --border-subtle: rgba(0, 255, 136, 0.1);
-  --border-medium: rgba(0, 255, 136, 0.2);
-  --accent: #00ff88; --accent-glow: rgba(0, 255, 136, 0.3);
-  --text-primary: rgba(0, 255, 136, 0.9);
-  --text-secondary: rgba(0, 255, 136, 0.5);
-  --text-muted: rgba(0, 255, 136, 0.3);
+
+/* 5. Cyberpunk Neon — 赛博霓虹 */
+body.theme-cyberpunk-neon {
+  --bg-primary: #0A0A0F; --bg-secondary: #111122;
+  --bg-glass: rgba(10, 10, 15, 0.8);
+  --border-subtle: rgba(0, 255, 136, 0.08);
+  --border-medium: rgba(0, 255, 136, 0.18);
+  --accent: #00FF88; --accent-glow: rgba(0, 255, 136, 0.35);
+  --text-primary: rgba(204, 204, 221, 0.9);
+  --text-secondary: rgba(204, 204, 221, 0.5);
+  --text-muted: rgba(204, 204, 221, 0.28);
   --surface: rgba(0, 255, 136, 0.03);
   --surface-hover: rgba(0, 255, 136, 0.08);
   --danger: #ff4444;
-}
-body.theme-minimal {
-  --bg-primary: #0c0c1d; --bg-secondary: #16163a;
-  --bg-glass: rgba(12, 12, 29, 0.5);
-  --border-subtle: rgba(255, 255, 255, 0.04);
-  --border-medium: rgba(255, 255, 255, 0.08);
-  --accent: #c4b5fd; --accent-glow: rgba(196, 181, 253, 0.2);
-  --text-primary: rgba(224, 224, 255, 0.9);
-  --text-secondary: rgba(224, 224, 255, 0.5);
-  --text-muted: rgba(224, 224, 255, 0.25);
-  --surface: rgba(255, 255, 255, 0.02);
-  --surface-hover: rgba(255, 255, 255, 0.05);
-  --danger: #fca5a5;
+  --grid-fine: rgba(0,255,136,0.04);
+  --grid-main: rgba(0,255,136,0.08);
+  --axis: rgba(0,255,136,0.15);
 }

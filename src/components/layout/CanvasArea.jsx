@@ -1,13 +1,17 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import MicroButton from '../ui/MicroButton'
+import Tooltip, { Separator, ToolbarGroup } from '../ui/Tooltip'
+import ExportMenu from '../ui/ExportMenu'
 import Canvas2D from '../canvas/Canvas2D'
 import Canvas3D from '../canvas/Canvas3D'
 import CurveAnimation from '../canvas/CurveAnimation'
 import PointMotion from '../canvas/PointMotion'
 import TangentLine from '../canvas/TangentLine'
 import DemoPlayer from '../panels/DemoPlayer'
+import LegendOverlay from '../ui/LegendOverlay'
+import EmptyStateGuide from '../ui/EmptyStateGuide'
 import { useViewStore } from '../../stores/viewStore'
 import { useFunctionStore } from '../../stores/functionStore'
 
@@ -28,11 +32,56 @@ export default function CanvasArea({ onToggleSidebar }) {
   const toggleGrid = useViewStore((s) => s.toggleGrid)
   const zoomIn = useViewStore((s) => s.zoomIn)
   const zoomOut = useViewStore((s) => s.zoomOut)
+  const resetView = useViewStore((s) => s.resetView)
   const screenshotPending = useViewStore((s) => s.screenshotPending)
   const clearScreenshot = useViewStore((s) => s.clearScreenshot)
-  const requestScreenshot = useViewStore((s) => s.requestScreenshot)
   const toggleFullscreen = useViewStore((s) => s.toggleFullscreen)
   const functions = useFunctionStore((s) => s.functions)
+
+  // Keyboard shortcuts for toolbar
+  const handleKeyDown = useCallback((e) => {
+    // Don't fire when typing in inputs
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return
+    // Don't fire with Ctrl/Cmd modifiers (except Ctrl+= for zoom)
+    if ((e.ctrlKey || e.metaKey) && e.key !== '=' && e.key !== '-') return
+
+    switch (e.key) {
+      case 'g':
+      case 'G':
+        toggleGrid()
+        break
+      case '=':
+        if (e.ctrlKey || e.metaKey) {
+          e.preventDefault()
+          zoomIn()
+        }
+        break
+      case '-':
+        if (e.ctrlKey || e.metaKey) {
+          e.preventDefault()
+          zoomOut()
+        }
+        break
+      case '0':
+        if (!e.ctrlKey && !e.metaKey) resetView()
+        break
+      case 'f':
+      case 'F':
+        if (!e.ctrlKey && !e.metaKey) toggleFullscreen()
+        break
+      case '2':
+        if (!e.ctrlKey && !e.metaKey) setMode('2D')
+        break
+      case '3':
+        if (!e.ctrlKey && !e.metaKey) setMode('3D')
+        break
+    }
+  }, [toggleGrid, zoomIn, zoomOut, resetView, toggleFullscreen, setMode])
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [handleKeyDown])
 
   useEffect(() => {
     const el = containerRef.current
@@ -47,17 +96,16 @@ export default function CanvasArea({ onToggleSidebar }) {
   // Auto-dismiss toast after 2s
   useEffect(() => {
     if (!toast) return
-    const t = setTimeout(() => setToast(null), 2000)
-    return () => clearTimeout(t)
+    const tm = setTimeout(() => setToast(null), 2000)
+    return () => clearTimeout(tm)
   }, [toast])
 
   // Screenshot capture
   useEffect(() => {
     if (!screenshotPending) return
     const doCapture = () => {
-      // Try 2D canvas first, then 3D canvas
       let canvas = document.querySelector('.canvas2d-main canvas')
-      if (!canvas) canvas = document.querySelector('canvas') // 3D Three.js canvas
+      if (!canvas) canvas = document.querySelector('canvas')
       if (canvas) {
         try {
           const link = document.createElement('a')
@@ -72,7 +120,6 @@ export default function CanvasArea({ onToggleSidebar }) {
         setToast(t('toast.screenshotFailed'))
       }
     }
-    // Small delay for 3D canvas to render current frame
     setTimeout(doCapture, 50)
     clearScreenshot()
   }, [screenshotPending, clearScreenshot, t])
@@ -81,48 +128,100 @@ export default function CanvasArea({ onToggleSidebar }) {
   const range2D = 6 / zoom
   const half = range2D / 2
 
+  const zoomDisplay = zoom < 1 ? `${zoom.toFixed(1)}×` : `${Math.round(zoom)}×`
+
   return (
     <main style={{
       flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0,
       background: 'radial-gradient(circle at 50% 40%, var(--accent-glow), transparent 60%)',
       position: 'relative',
     }}>
+      {/* ═══ Toolbar — Grouped ═══ */}
       <div className="canvas-toolbar" style={{
-        display: 'flex', gap: '6px', padding: '8px 14px',
+        display: 'flex', gap: '4px', padding: '8px 14px',
         borderBottom: '1px solid var(--border-subtle)', flexWrap: 'wrap', alignItems: 'center',
       }}>
+        {/* Mobile menu button (hidden on desktop) */}
         <MicroButton onClick={onToggleSidebar} style={{ display: 'none' }} className="mobile-menu-btn">☰</MicroButton>
-        <MicroButton active={mode === '2D'} onClick={() => setMode('2D')}>{t('mode.2d')}</MicroButton>
-        <MicroButton active={mode === '3D'} onClick={() => setMode('3D')}>{t('mode.3d')}</MicroButton>
 
-        {/* Desmos-style axis range display */}
-        {mode === '2D' && (
-          <div style={{ display: 'flex', gap: '2px', alignItems: 'center', fontSize: '10px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-            <span>x ∈ [</span>
-            <span style={{ color: 'var(--text-secondary)' }}>{(-half).toFixed(1)}</span>
-            <span>, </span>
-            <span style={{ color: 'var(--text-secondary)' }}>{half.toFixed(1)}</span>
-            <span>]</span>
-            <span style={{ margin: '0 4px', color: 'var(--border-medium)' }}>|</span>
-            <span>{t('toolbar.step')} </span>
-            <span style={{ color: 'var(--text-secondary)' }}>
-              {zoom > 4 ? '0.25' : zoom > 2 ? '0.5' : '1'}
-            </span>
+        {/* Group 1: View Controls */}
+        <ToolbarGroup label={t('toolbar.viewControls') || 'View Controls'}>
+          <Tooltip label={t('nav.grid') || 'Grid'} shortcut="G">
+            <MicroButton active={grid} onClick={toggleGrid}>⊞</MicroButton>
+          </Tooltip>
+          <Tooltip label={t('nav.zoomIn') || 'Zoom In'} shortcut="Ctrl+=">
+            <MicroButton onClick={zoomIn}>🔍+</MicroButton>
+          </Tooltip>
+          <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', minWidth: '36px', textAlign: 'center' }}>
+            {zoomDisplay}
+          </span>
+          <Tooltip label={t('nav.zoomOut') || 'Zoom Out'} shortcut="Ctrl+-">
+            <MicroButton onClick={zoomOut}>🔍-</MicroButton>
+          </Tooltip>
+          <Tooltip label={t('nav.reset') || 'Reset View'} shortcut="0">
+            <MicroButton onClick={resetView}>↺</MicroButton>
+          </Tooltip>
+        </ToolbarGroup>
+
+        <Separator />
+
+        {/* Group 2: Mode Switch — Segmented Control */}
+        <ToolbarGroup label={t('toolbar.modeSwitch') || 'Mode'}>
+          <div style={{
+            display: 'flex', background: 'var(--surface)', borderRadius: '8px',
+            border: '1px solid var(--border-subtle)', padding: '2px',
+          }}>
+            {['2D', '3D'].map((m) => (
+              <Tooltip key={m} label={m === '2D' ? (t('mode.2d') || '2D Mode') : (t('mode.3d') || '3D Mode')} shortcut={m === '2D' ? '2' : '3'}>
+                <button
+                  onClick={() => setMode(m)}
+                  style={{
+                    padding: '5px 14px', border: 'none', borderRadius: '6px',
+                    fontSize: '12px', fontFamily: 'var(--font-mono)', fontWeight: 600,
+                    cursor: 'pointer', position: 'relative',
+                    background: mode === m ? 'var(--accent)' : 'transparent',
+                    color: mode === m ? '#fff' : 'var(--text-muted)',
+                    transition: 'all 0.2s',
+                    outline: 'none',
+                  }}
+                >{m}</button>
+              </Tooltip>
+            ))}
           </div>
-        )}
+
+          {/* Desmos-style axis range */}
+          {mode === '2D' && (
+            <div style={{ display: 'flex', gap: '2px', alignItems: 'center', fontSize: '10px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginLeft: '6px' }}>
+              <span>x ∈ [</span>
+              <span style={{ color: 'var(--text-secondary)' }}>{(-half).toFixed(1)}</span>
+              <span>, </span>
+              <span style={{ color: 'var(--text-secondary)' }}>{half.toFixed(1)}</span>
+              <span>]</span>
+            </div>
+          )}
+        </ToolbarGroup>
+
+        <Separator />
+
+        {/* Group 3: Export */}
+        <ToolbarGroup label={t('toolbar.exportGroup') || 'Export'}>
+          <ExportMenu />
+          <Tooltip label={t('nav.fullscreen') || 'Fullscreen'} shortcut="F">
+            <MicroButton onClick={toggleFullscreen}>⛶</MicroButton>
+          </Tooltip>
+        </ToolbarGroup>
 
         <div style={{ flex: 1 }} />
-        <MicroButton active={grid} onClick={toggleGrid}>{t('nav.grid')}</MicroButton>
-        <MicroButton onClick={zoomIn} title={t('nav.zoomIn')}>🔍+</MicroButton>
-        <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', minWidth: '36px', textAlign: 'center' }}>
-          {zoom < 1 ? `${zoom.toFixed(1)}x` : `${Math.round(zoom)}x`}
-        </span>
-        <MicroButton onClick={zoomOut} title={t('nav.zoomOut')}>🔍-</MicroButton>
-        <MicroButton onClick={useViewStore.getState().resetView} title={t('nav.reset')}>↺</MicroButton>
-        <MicroButton onClick={requestScreenshot}>{t('nav.screenshot')}</MicroButton>
-        <MicroButton onClick={toggleFullscreen}>{t('nav.fullscreen')}</MicroButton>
+
+        {/* Step indicator (right-aligned) */}
+        {mode === '2D' && (
+          <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+            {t('toolbar.step')} {zoom > 4 ? '0.25' : zoom > 2 ? '0.5' : '1'}
+          </span>
+        )}
       </div>
 
+      {/* ═══ Canvas Area ═══ */}
       <div ref={containerRef} className="canvas2d-main"
         style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
         {mode === '2D' && (
@@ -135,6 +234,8 @@ export default function CanvasArea({ onToggleSidebar }) {
         )}
         {mode === '3D' && <Canvas3D />}
         <DemoPlayer />
+        <LegendOverlay compact={size.w < 600} />
+        <EmptyStateGuide />
       </div>
 
       {/* Toast notification */}
@@ -152,6 +253,7 @@ export default function CanvasArea({ onToggleSidebar }) {
         >{toast}</motion.div>
       )}
 
+      {/* Status bar */}
       <div style={{
         display: 'flex', padding: '6px 14px',
         borderTop: '1px solid var(--border-subtle)',

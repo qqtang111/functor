@@ -135,5 +135,23 @@
   "seq.computing": "Computing...",
   "seq.exactValue": "Exact",
 
-  "presets.sequences": "Sequences & Series"
+  "presets.sequences": "Sequences & Series",
+
+  "legend.title": "Legend",
+
+  "empty.guidance": "Enter a function expression to begin",
+  "empty.hint": "Try: sin(x), x², or pick a preset below",
+
+  "nav.export": "Export",
+  "export.png": "Export PNG",
+  "export.url": "Copy Share Link",
+  "export.latex": "Copy LaTeX",
+  "export.urlCopied": "Link copied",
+  "export.latexCopied": "LaTeX copied",
+
+  "splash.start": "Get Started",
+
+  "toolbar.viewControls": "View Controls",
+  "toolbar.modeSwitch": "Mode",
+  "toolbar.exportGroup": "Export"
 }

@@ -135,5 +135,23 @@
   "seq.computing": "计算中...",
   "seq.exactValue": "精确值",
 
-  "presets.sequences": "数列与级数"
+  "presets.sequences": "数列与级数",
+
+  "legend.title": "图例",
+
+  "empty.guidance": "在左侧输入一个函数表达式来开始",
+  "empty.hint": "试试: sin(x), x², 或者从下面的预设中选一个",
+
+  "nav.export": "导出",
+  "export.png": "导出 PNG",
+  "export.url": "复制分享链接",
+  "export.latex": "复制 LaTeX 公式",
+  "export.urlCopied": "链接已复制",
+  "export.latexCopied": "LaTeX 已复制",
+
+  "splash.start": "开始使用",
+
+  "toolbar.viewControls": "视图控制",
+  "toolbar.modeSwitch": "模式切换",
+  "toolbar.exportGroup": "导出"
 }

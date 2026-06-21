@@ -103,13 +103,38 @@
   }
 }
 
+/* New UI components — responsive */
+@media (max-width: 600px) {
+  .splash-card {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 16px 18px !important;
+  }
+  .quick-start-card {
+    min-width: 120px !important;
+    padding: 14px 16px !important;
+  }
+  .legend-overlay {
+    max-width: 160px !important;
+    font-size: 10px !important;
+    padding: 6px 8px !important;
+  }
+}
+
 /* Touch targets — minimum 40px for accessibility */
 @media (pointer: coarse) {
   button, [role="button"] {
     min-height: 40px;
     min-width: 40px;
   }
+  .legend-overlay [role] {
+    min-height: 36px;
+  }
   input[type="range"] {
     min-height: 24px;
+  }
+  .canvas-toolbar button {
+    min-height: 36px;
+    min-width: 36px;
   }
 }
